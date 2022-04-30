@@ -16,11 +16,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
+    "target": "ES6",
+    "module": "CommonJS",
     "lib": [
-      "es2020",
-      "dom"
+      "ES6",
+      "DOM",
+      "DOM.Iterable"
     ]
   },
   "angularCompilerOptions": {
