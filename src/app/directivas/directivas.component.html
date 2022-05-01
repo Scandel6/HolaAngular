@@ -1,0 +1,52 @@
+<!--En este apartado vamos a usar varias directivas built-in básicas de Angular, aunque nosotros también podemos desarrollar las nuestras propias-->
+
+<h1>Estamos en Directivas</h1>
+
+<h2>Recorrer listas usando *ngFor</h2>
+
+<!-- Ahora vamos a recorrer la lista de strings 'elementos' con la ayuda de Angular -->
+<div *ngFor="let elemento of elementos">
+    <p>
+        El elemento que estoy recorriendo es: {{elemento}}
+    </p>
+
+</div>
+
+<table>
+    <thead>
+        <th>
+            Nombre
+        </th>
+    </thead>
+    <tbody>
+        <!--Con esto conseguimos tener tantas líneas como elementos tenga 'elementos'-->
+        <tr *ngFor="let elemento of elementos">
+            <td>
+                {{elemento}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Ahora podemos usar un if para mostrar según qué cosas usando una condición -->
+
+<h2>Ocultar cosas según un criterio usando *ngIf</h2>
+
+<div *ngIf="(tieneMuchosElementos())">
+    <p>Tengo al menos 5 elementos</p>
+    
+</div>
+
+<div *ngIf="(!tieneMuchosElementos())">
+    <p>Tengo menos de 5 elementos</p>
+
+</div>
+
+
+<!-- Podemos hacer que una sección tenga un estilo dinámico a partir de una condición-->
+
+<h2>Dar estilo dinámico a un elemento con [ngClass]</h2>
+
+<!--El texto es de color verde si es de la clase altoNumeroElementos o rojo si es de la clase bajoNumeroElementos -->
+
+<p [ngClass]="tieneMuchosElementos() ? 'altoNumeroElementos' : 'bajoNumeroElementos'">Número de elementos: {{elementos.length}}</p>

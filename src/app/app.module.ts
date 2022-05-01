@@ -9,6 +9,7 @@ import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { ArticuloListComponent } from './articulo/articulo-list/articulo-list.component';
 import { ArticuloFormComponent } from './articulo/articulo-form/articulo-form.component';
+import { DirectivasComponent } from './directivas/directivas.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ArticuloFormComponent } from './articulo/articulo-form/articulo-form.co
     NavbarComponent,
     FooterComponent,
     ArticuloListComponent,
-    ArticuloFormComponent
+    ArticuloFormComponent,
+    DirectivasComponent
   ],
   imports: [
     BrowserModule,
