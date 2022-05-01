@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!--[routerLinkActive]="['active']" checkea si está activo, y si lo está, lo marca como activo -->
+          <!-- Cuando el navbar (routerLinkActive) busca qué path está activo, siempre encuentra una cadena vacía, 
+            que es el path de home, por tanto lo marca como activo para evitar esto, añadimos routerLinkActiveOptions 
+            para que en vez de contener '' o 'acerca', tenga que ser exactamente igual -->
+          <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" [routerLink]="['']">Home</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" [routerLink]="['acerca']">Acerca de</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

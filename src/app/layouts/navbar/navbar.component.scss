@@ -1,0 +1,5 @@
+//links dentro de un item de lista activo del nav-bar
+.navbar-nav li.active > a{
+    background-color: black;
+    color:whitesmoke;
+}
