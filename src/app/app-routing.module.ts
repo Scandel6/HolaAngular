@@ -6,6 +6,7 @@ import { ArticuloListComponent } from './articulo/articulo-list/articulo-list.co
 import { DirectivasComponent } from './directivas/directivas.component';
 import { HomeComponent } from './home/home.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { TypescriptEjemploComponent } from './typescript-ejemplo/typescript-ejemplo.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'articulos', component: ArticuloListComponent },
   { path: 'articulo-ficha/:idArticulo', component: ArticuloFormComponent },
   { path: 'directivas', component: DirectivasComponent  },
-  { path: 'pipes', component:PipesComponent }
+  { path: 'pipes', component:PipesComponent },
+  { path: 'typescript', component: TypescriptEjemploComponent }
 ];
 
 @NgModule({

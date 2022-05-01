@@ -12,6 +12,7 @@ import { ArticuloFormComponent } from './articulo/articulo-form/articulo-form.co
 import { DirectivasComponent } from './directivas/directivas.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { InversorNombrePipe } from './shared/inversor-nombre.pipe';
+import { TypescriptEjemploComponent } from './typescript-ejemplo/typescript-ejemplo.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { InversorNombrePipe } from './shared/inversor-nombre.pipe';
     ArticuloFormComponent,
     DirectivasComponent,
     PipesComponent,
-    InversorNombrePipe
+    InversorNombrePipe,
+    TypescriptEjemploComponent
   ],
   imports: [
     BrowserModule,
