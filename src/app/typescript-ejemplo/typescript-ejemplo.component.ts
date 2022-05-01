@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TypescriptEjemploComponent implements OnInit {
 
-  numero: number = 10; //int, double
-  cadena: string = '';
-  esValido: boolean = true;
+  private numero: number = 10; //int, double
+  public cadena: string = '';
+  protected esValido: boolean = true;
   fecha: Date = new Date();
 
   numerosPremiados: number[] = []; //arrays
@@ -32,6 +32,14 @@ export class TypescriptEjemploComponent implements OnInit {
     }else{
       console.log("No tiene valor");
     }
+  }
+
+  private calcular():number {
+    const numero1: number = 10; //Más recomendable usar const para estar más seguros
+    let numero2: number = 10;
+    numero2 = 20;
+
+    return 0;
   }
 
 }
