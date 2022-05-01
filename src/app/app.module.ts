@@ -10,6 +10,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { ArticuloListComponent } from './articulo/articulo-list/articulo-list.component';
 import { ArticuloFormComponent } from './articulo/articulo-form/articulo-form.component';
 import { DirectivasComponent } from './directivas/directivas.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { InversorNombrePipe } from './shared/inversor-nombre.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DirectivasComponent } from './directivas/directivas.component';
     FooterComponent,
     ArticuloListComponent,
     ArticuloFormComponent,
-    DirectivasComponent
+    DirectivasComponent,
+    PipesComponent,
+    InversorNombrePipe
   ],
   imports: [
     BrowserModule,

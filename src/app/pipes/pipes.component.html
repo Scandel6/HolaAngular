@@ -1,0 +1,37 @@
+<!-- Consultar https://angular.io/guide/pipes -->
+<h1>Pipes</h1>
+
+<h2>Raw</h2>
+
+{{cadena}}
+<br/>
+{{numero}}
+<br/>
+{{fecha}}
+<br/>
+{{nombre}}
+
+<h2>Cadena</h2>
+
+{{cadena | uppercase}}<br/>
+{{cadena | titlecase}}<br/>
+{{cadena | lowercase}}<br/>
+
+
+<h2>Número</h2>
+
+<!-- Queremos un número con al menos un dígito en la parte entera y entre 0 a 2 en la parte decimal-->
+{{numero | number:'1.0-2'}}<br/>
+<!-- Ahora lo queremos en el formato español -->
+{{numero | number:'1.0-2':'es-ES'}}<br/>
+
+
+<h2>Fecha</h2>
+
+<!--Mostrar una fecha corta sin especificar zona horaria en el formato español-->
+{{ fecha | date:'shortDate':undefined:'es-ES' }}<br/>
+{{ fecha | date:'dd/MM/yyyy' }}<br/>
+
+<h2>Nombre</h2>
+<!--Usamos un pipe que hemos creado con "ng g pipe shared/inversorNombre" para que nos muestre el nombre de la forma que queremos-->
+{{nombre | inversorNombre}}
