@@ -1,5 +1,6 @@
 import { ConditionalExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { TIPODESCUENTO } from '../shared/TIPODESCUENTO.enum';
 
 @Component({
   selector: 'app-typescript-ejemplo',
@@ -34,7 +35,11 @@ export class TypescriptEjemploComponent implements OnInit {
       console.log("No tiene valor");
     }
     this.probarArrays();
+    this.enumerados(TIPODESCUENTO.ESPECIAL);
   }
+
+  
+  // TIPOS
 
   private calcular():number {
     const numero1: number = 10; //Más recomendable usar const para estar más seguros
@@ -43,6 +48,9 @@ export class TypescriptEjemploComponent implements OnInit {
 
     return 0;
   }
+
+
+  //ARRAYS
 
   private probarArrays() {
     const array: string[] = ['Pera', 'Manzana', 'Melón', 'Sandía', 'Naranja'];
@@ -76,7 +84,7 @@ export class TypescriptEjemploComponent implements OnInit {
 
   }
 
-  //Probar métodos en TypeScript
+  //MÉTODOS
   
   // Un método puede ser public, private o protected
   // Si el tipo de método está vacío, por defecto es void. Pero aún así se pueden retornar
@@ -89,6 +97,15 @@ export class TypescriptEjemploComponent implements OnInit {
 
   private comprobarValidez(x: number, y: number): void {
     throw new Error('No es válido');
+  }
+
+
+  // TIPO ENUMERADOS
+  private enumerados(tipo: TIPODESCUENTO): void{
+    if (tipo === TIPODESCUENTO.ESPECIAL) {
+      //Do something
+      console.log(tipo);
+    }
   }
 
 }
