@@ -1,5 +1,6 @@
 import { ConditionalExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Coche } from '../entidades/coche.model';
 import { TIPODESCUENTO } from '../shared/TIPODESCUENTO.enum';
 
 @Component({
@@ -107,5 +108,11 @@ export class TypescriptEjemploComponent implements OnInit {
       console.log(tipo);
     }
   }
+
+  
+  // CLASES I
+  private pruebaClases(): void{
+    let coche: Coche = new Coche(1, "Seat", "Ibiza");
+  }  
 
 }
