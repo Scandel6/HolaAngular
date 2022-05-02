@@ -8,16 +8,13 @@
     <thead>
         <th>Id</th>
         <th>Nombre</th>
+        <th>Precio</th>
     </thead>
     <tbody>
-        <tr (click)="navegarAFicha(1)">
-            <td>1</td>
-            <td>Articulo 01</td>
-        </tr>
-        <tr (click)="navegarAFicha(2)">
-
-            <td>2</td>
-            <td>Articulo 02</td>
+        <tr *ngFor="let articulo of articulos" (click)="navegarAFicha(articulo.getId())">
+            <td>{{articulo.getId()}}</td>
+            <td>{{articulo.getNombre()}}</td>
+            <td>{{articulo.getPrecio()}}</td>
         </tr>
     </tbody>
 </table>
