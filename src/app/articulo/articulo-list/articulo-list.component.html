@@ -1,20 +1,20 @@
 <h1>Lista de artículos</h1>
 
-<p>
-    Modo: {{modo}}
-</p>
+<p>Modo: {{ modo }}</p>
 
-<table>
-    <thead>
-        <th>Id</th>
-        <th>Nombre</th>
-        <th>Precio</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let articulo of articulos" (click)="navegarAFicha(articulo.getId())">
-            <td>{{articulo.getId()}}</td>
-            <td>{{articulo.getNombre()}}</td>
-            <td>{{articulo.getPrecio()}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="contenedor">
+
+    <!--Sacado de la documentación de Bootstrap-->
+
+    <div class="card" style="width: 18rem" *ngFor="let articulo of articulos">
+        <!-- [src] prepara src para aceptar código, igual que en [RouterLink] -->
+        <img class="card-img-top" [src]="articulo.getImagen()" alt="Zapatilla de {{articulo.getNombre()}}" />
+        <div class="card-body">
+            <h5 class="card-title">{{ articulo.getNombre() }}</h5>
+            <p class="card-text">{{ articulo.getDescripcion() }}</p>
+            <!-- Hay que especificar desde la raíz que quiere salir el routerLink, si no, va a articulos/articulo-ficha-->
+            <a [routerLink]="['/articulo-ficha', articulo.getId()]" class="btn btn-primary">Ver artículo</a>
+        </div>
+    </div>
+
+</div>

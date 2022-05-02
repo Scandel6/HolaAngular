@@ -4,7 +4,7 @@ export class Articulo {
     private nombre: string;
     private precio: number;
     private descripcion?: string;
-    private imagen?: string; // En base 64
+    private imagen?: string; // En base64
 
 
     public getId(): number {
