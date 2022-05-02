@@ -124,4 +124,26 @@ export class TypescriptEjemploComponent implements OnInit {
     //let vehiculo: Vehiculo = new Vehiculo(1, "Seat", "Ibiza", TIPOCOCHE.DEPORTIVO);
   }  
 
+
+  // EXTRAS
+  // Permiten trabajar con valores nulos o sin definir de forma mucho más potente
+   private extras01():void{
+     // Optional Chaining
+
+    // Lo que hace la siguiente línea es controlar si foo es undefined o null en cuyo caso retorna undefined
+    // Si no, ejecuta los métodos que se le piden
+    
+    //let x = foo?.bar.baz();
+   }
+
+   private extras02(): void{
+    // Nullish Coalescing
+
+    // Una manera de entender esto es como si el operador '??' fuera una forma de recurrir al valor por defecto cuando
+    // tratamos con null o undefined
+    // Por tanto es una forma de decir que foo será usado cuando existe, pero cuando es null o undefined, calculamos bar()
+
+    //let x = foo ?? bar();
+   }
+
 }
