@@ -13,6 +13,7 @@ import { DirectivasComponent } from './directivas/directivas.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { InversorNombrePipe } from './shared/inversor-nombre.pipe';
 import { TypescriptEjemploComponent } from './typescript-ejemplo/typescript-ejemplo.component';
+import { ArticuloCardComponent } from './articulo/articulo-card/articulo-card.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TypescriptEjemploComponent } from './typescript-ejemplo/typescript-ejem
     DirectivasComponent,
     PipesComponent,
     InversorNombrePipe,
-    TypescriptEjemploComponent
+    TypescriptEjemploComponent,
+    ArticuloCardComponent
   ],
   imports: [
     BrowserModule,
