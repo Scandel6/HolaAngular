@@ -28,11 +28,11 @@ export class TypescriptEjemploComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    /*if(this.otroNumero){
+    if(this.otroNumero){
       console.log("Tiene valor: "+ +this.otroNumero)
     }else{
       console.log("No tiene valor");
-    }*/
+    }
     this.probarArrays();
   }
 
@@ -58,7 +58,6 @@ export class TypescriptEjemploComponent implements OnInit {
 
     console.log(array);
 
-
     const posicion: number = array.indexOf('Manzana');
 
     if(posicion>-1){
@@ -75,6 +74,21 @@ export class TypescriptEjemploComponent implements OnInit {
 
     console.log(resultado);
 
+  }
+
+  //Probar métodos en TypeScript
+  
+  // Un método puede ser public, private o protected
+  // Si el tipo de método está vacío, por defecto es void. Pero aún así se pueden retornar
+  // valores distintos.
+
+  // Es recomendable dejar de forma explícita la visibilidad del método y su tipo. Y camel-case
+  public calcularDescuento(codigoCliente: number, tipoTarifa: number): number{
+    return 0;
+  }
+
+  private comprobarValidez(x: number, y: number): void {
+    throw new Error('No es válido');
   }
 
 }
