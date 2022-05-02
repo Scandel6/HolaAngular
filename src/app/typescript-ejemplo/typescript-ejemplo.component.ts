@@ -1,3 +1,4 @@
+import { ConditionalExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -27,11 +28,12 @@ export class TypescriptEjemploComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    if(this.otroNumero){
+    /*if(this.otroNumero){
       console.log("Tiene valor: "+ +this.otroNumero)
     }else{
       console.log("No tiene valor");
-    }
+    }*/
+    this.probarArrays();
   }
 
   private calcular():number {
@@ -40,6 +42,39 @@ export class TypescriptEjemploComponent implements OnInit {
     numero2 = 20;
 
     return 0;
+  }
+
+  private probarArrays() {
+    const array: string[] = ['Pera', 'Manzana', 'Melón', 'Sandía', 'Naranja'];
+
+    console.log(array.length);
+
+    array.unshift('Cereza'); // Añade al inicio
+
+    console.log(array);
+
+
+    array.pop(); // Quita el del final
+
+    console.log(array);
+
+
+    const posicion: number = array.indexOf('Manzana');
+
+    if(posicion>-1){
+      array.splice(posicion, 1); // Eliminar un elemento concreto del array
+    }
+
+    console.log(array);
+
+    array.sort();
+
+    const array02:string [] = ['Fresa', 'Platano'];
+
+    const resultado: string [] = array.concat(array02);
+
+    console.log(resultado);
+
   }
 
 }
