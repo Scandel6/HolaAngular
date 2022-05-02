@@ -8,6 +8,7 @@
         <h5 class="card-title">{{ articulo.getNombre() }}</h5>
         <p class="card-text">{{ articulo.getDescripcion() }}</p>
         <!-- Hay que especificar desde la raíz que quiere salir el routerLink, si no, va a articulos/articulo-ficha-->
-        <a [routerLink]="['/articulo-ficha', articulo.getId()]" class="btn btn-primary">Ver artículo</a>
+        <!-- Con el click emitimos el id del artículo cargado, opr tanto hay que hacer la navegación en el padre-->
+        <a class="btn btn-primary" (click)="pulsarBoton()">Ver artículo</a>
     </div>
 </div>
