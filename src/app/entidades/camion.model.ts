@@ -1,29 +1,31 @@
-import { TIPOCOCHE } from "../shared/TIPOCOCHE.enum";
+import { TIPOCAMION } from "../shared/TIPOCAMION.enum";
 import { Vehiculo } from "./vehiculo.model";
-export class Coche extends Vehiculo {
 
-    private tipo: TIPOCOCHE;
+export class Camion extends Vehiculo {
 
-    public getTipo() {
+    private tipo: TIPOCAMION;
+
+
+    public getTipo(): TIPOCAMION {
         return this.tipo;
     }
 
-    public setTipo(tipo: TIPOCOCHE): void {
+    public setTipo(tipo: TIPOCAMION): void {
         this.tipo = tipo;
     }
-
 
     constructor(
         id: number,
         marca: string,
         modelo: string,
-        tipo: TIPOCOCHE,
+        tipo: TIPOCAMION,
         descripcion?: string,
         imagen?: string
-    ) {
-
+        ) {
+            
         super(id, marca, modelo, descripcion, imagen);
         this.tipo = tipo
     }
+
 
 }

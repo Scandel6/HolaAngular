@@ -1,6 +1,10 @@
 import { ConditionalExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Camion } from '../entidades/camion.model';
 import { Coche } from '../entidades/coche.model';
+import { Vehiculo } from '../entidades/vehiculo.model';
+import { TIPOCAMION } from '../shared/TIPOCAMION.enum';
+import { TIPOCOCHE } from '../shared/TIPOCOCHE.enum';
 import { TIPODESCUENTO } from '../shared/TIPODESCUENTO.enum';
 
 @Component({
@@ -112,7 +116,12 @@ export class TypescriptEjemploComponent implements OnInit {
   
   // CLASES I
   private pruebaClases(): void{
-    let coche: Coche = new Coche(1, "Seat", "Ibiza");
+    let coche: Coche = new Coche(1, "Seat", "Ibiza", TIPOCOCHE.DEPORTIVO);
+    let camion: Camion = new Camion (2, "Mercedes", "Trailer", TIPOCAMION.ARTICULADO);
+    let coche02: Vehiculo = new Coche(1, "Seat", "Ibiza", TIPOCOCHE.DEPORTIVO);
+
+    // Si Vehiculo no fuera abstracta, nos dejaría hacer:
+    //let vehiculo: Vehiculo = new Vehiculo(1, "Seat", "Ibiza", TIPOCOCHE.DEPORTIVO);
   }  
 
 }
