@@ -1,1 +1,13 @@
-<p>articulo-card works!</p>
+ <!--Sacado de la documentación de Bootstrap-->
+
+ <!-- Si hay articulo, se muestra -->
+ <div class="card" style="width: 18rem" *ngIf="articulo">
+    <!-- [src] prepara src para aceptar código, igual que en [RouterLink] -->
+    <img class="card-img-top" [src]="articulo.getImagen()" alt="Zapatilla de {{articulo.getNombre()}}" />
+    <div class="card-body">
+        <h5 class="card-title">{{ articulo.getNombre() }}</h5>
+        <p class="card-text">{{ articulo.getDescripcion() }}</p>
+        <!-- Hay que especificar desde la raíz que quiere salir el routerLink, si no, va a articulos/articulo-ficha-->
+        <a [routerLink]="['/articulo-ficha', articulo.getId()]" class="btn btn-primary">Ver artículo</a>
+    </div>
+</div>
