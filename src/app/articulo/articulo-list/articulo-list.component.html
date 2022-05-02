@@ -6,5 +6,5 @@
     <!--[articulo] es el valor que pide articulo-card a través de @Input y articulo es el que estás recorriendo-->
     <!-- cuando hay click navegamos a la ficha con el código que se nos pase como evento,
     por tanto la navegación ahora lo hace esta clase, no la hija (card)-->
-   <app-articulo-card *ngFor="let articulo of articulos" [articulo]="articulo" (click)="navegarAFicha($event)" ></app-articulo-card>
+   <app-articulo-card *ngFor="let articulo of articulos" [articulo]="articulo" [textoBoton]="'Ver detalles'" (click)="navegarAFicha($event)" ></app-articulo-card>
 </div>

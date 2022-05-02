@@ -8,6 +8,7 @@ import { Articulo } from '../articulo.model';
 })
 export class ArticuloCardComponent implements OnInit {
   @Input() articulo?: Articulo; // Se le pasa a través de articulo-list.component.html, quien lo recive por su TypeScript
+  @Input() textoBoton: string = "Pulsar";
   @Output() click: EventEmitter<number> = new EventEmitter<number>(); //Enviamos un click como evento para que sea el padre de esta clase quien gestione lo que esta va a mostrar
 
   constructor() {  }

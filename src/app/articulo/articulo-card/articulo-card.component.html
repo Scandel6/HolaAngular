@@ -9,6 +9,6 @@
         <p class="card-text">{{ articulo.getDescripcion() }}</p>
         <!-- Hay que especificar desde la raíz que quiere salir el routerLink, si no, va a articulos/articulo-ficha-->
         <!-- Con el click emitimos el id del artículo cargado, opr tanto hay que hacer la navegación en el padre-->
-        <a class="btn btn-primary" (click)="pulsarBoton()">Ver artículo</a>
+        <a class="btn btn-primary" (click)="pulsarBoton()">{{textoBoton}}</a>
     </div>
 </div>
